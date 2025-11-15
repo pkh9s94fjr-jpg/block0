@@ -1,0 +1,66 @@
+{
+  "log-level": "debug",
+  "database-type": "leveldb",
+  "networkID": 64293,
+  "enableStaking": true,
+
+  "message": "Block — merged L1 genesis (P, X, C) — dev/test. Replace P/X placeholders with real bech32 UTXOs for production.",
+
+  "pChainGenesis": {
+    "networkID": 64293,
+    "message": "P-Chain (platform) minimal genesis — placeholders for UTXOs and minimal validator info (DEV/TEST)",
+    "initialSupplyUnits": 1000601,
+    "uxos": [
+      {
+        "address": "P-custom1ycs8zy3ewyv0vnjq29usuk5p23zdattgk6tdzt", 
+        "amount": "1000000000000000000"
+      },
+      {
+        "address": "P-custom1ycfumh6wlkn9yfeeydulycrxqyzxxwjz0720vw",
+        "amount": "1000000000000000000000000"
+      },
+      {
+        "address": "P-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p",
+        "amount": "600000000000000000000"
+      }
+    ],
+    "validators": [
+      {
+        "nodeID": "NodeID-9kozoVi92eM6mmQ5Bsj4uccnb575xTE7h",
+        "startTime": 0,
+        "endTime": 2147483647,
+        "weight": 1000000,
+        "rewardAddress": "X-custom1ycs8zy3ewyv0vnjq29usuk5p23zdattgk6tdzt",
+        "delegationFee": 1000000,
+        "signer": {
+          "publicKey": "0xa42509845a9715c4f8ab2eab2b36ac30680ad3b008fa96781bb9177f55059cb785c5a5cbafc4e0fecf2eaf749ea33edc",
+          "proofOfPossession": "0x84f96f657899d9929c3920cc8b88412045d60feaa04b4679fb672c9a68bcc0bd94448c25b084e4722a1dcf42d92c26e201ee9b01a61f2ee2c163878ff4d0f7240f3383b68f47276ccff1ce68fcdb1c1e428447154416aa19c6a410c388a3c9f7"
+        }
+      }
+    ]
+  },
+
+  "xChainGenesis": {
+    "networkID": 64293,
+    "message": "X-Chain minimal genesis (dev/test). Replace with real AVM genesis for production.",
+    "alloc": {
+      "X-custom1pkwvv8nqrdkxzx6rs2r4g770hg0vgtfs3da47t": "1000000000000000000",
+      "X-custom1ycfumh6wlkn9yfeeydulycrxqyzxxwjz0720vw": "1000000000000000000000000",
+      "X-custom18jma8ppw3nhx5r4ap8clazz0dps7rv5u9xde7p": "600000000000000000000"
+    }
+  },
+
+  "initialStakers": [
+    {
+      "nodeID": "NodeID-9kozoVi92eM6mmQ5Bsj4uccnb575xTE7h",
+      "rewardAddress": "X-custom1ycs8zy3ewyv0vnjq29usuk5p23zdattgk6tdzt",
+      "delegationFee": 1000000,
+      "signer": {
+        "publicKey": "0xa42509845a9715c4f8ab2eab2b36ac30680ad3b008fa96781bb9177f55059cb785c5a5cbafc4e0fecf2eaf749ea33edc",
+        "proofOfPossession": "0x84f96f657899d9929c3920cc8b88412045d60feaa04b4679fb672c9a68bcc0bd94448c25b084e4722a1dcf42d92c26e201ee9b01a61f2ee2c163878ff4d0f7240f3383b68f47276ccff1ce68fcdb1c1e428447154416aa19c6a410c388a3c9f7"
+      }
+    }
+  ],
+
+  "cChainGenesis": "ewogICAgIm5ldHdvcmtJRCI6IDY0MjkzLAogICAgImNvbmZpZyI6IHsKICAgICAgICAiY2hhaW5JZCI6IDY0MjkzLAogICAgICAgICJob21lc3RlYWRCbG9jayI6IDAsCiAgICAgICAgImVpcDE1MEJsb2NrIjogMCwKICAgICAgICAiZWlwMTU1QmxvY2siOiAwLAogICAgICAgICJlaXAxNThCbG9jayI6IDAsCiAgICAgICAgImJ5emFudGl1bUJsb2NrIjogMCwKICAgICAgICAiY29uc3RhbnRpbm9wbGVCbG9jayI6IDAsCiAgICAgICAgInBldGVyc2J1cmdCbG9jayI6IDAsCiAgICAgICAgImlzdGFuYnVsQmxvY2siOiAwLAogICAgICAgICJtdWlyR2xhY2llckJsb2NrIjogMCwKICAgICAgICAibG9uZG9uQmxvY2siOiAwCiAgICB9LAogICAgIm5vbmNlIjogIjB4MCIsCiAgICAidGltZXN0YW1wIjogIjB4MCIsCiAgICAiZXh0cmFEYXRhIjogIjB4IiwKICAgICJnYXNMaW1pdCI6ICIweDdhMTIwMCIsCiAgICAiZGlmZmljdWx0eSI6ICIweDAiLAogICAgIm1peEhhc2giOiAiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwKICAgICJjb2luYmFzZSI6ICIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLAogICAgInBhcmVudEhhc2giOiAiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwKICAgICJhbGxvYyI6IHsKICAgICAgICAiMjZmMDIxYTc3NDVlMjQ2NWQ0ODg4NzY3MjM5NjlkYmVmYTBjZWMxOSI6IHsgImJhbGFuY2UiOiAiMHhkZTBiNmIzYTc2NDAwMDAiIH0sCiAgICAgICAgIjhkYjk3YzdjZWNlMjQ5YzJiOThiZGMwMjI2Y2M0YzJhNTdiZjUyZmMiOiB7ICJiYWxhbmNlIjogIjB4ZDNjMjFiY2VjY2VkYTEwMDAwMDAiIH0sCiAgICAgICAgImE1ZjlmMzAwMjY3MWI4ZjFhNmMxZDA5ZTJkN2Q4OTY0M2Y0Y2ZjZTciOiB7ICJiYWxhbmNlIjogIjB4MjA4NmFjMzUxMDUyNjAwMDAwIiB9CiAgICB9LAogICAgIm51bWJlciI6ICIweDAiLAogICAgImdhc1VzZWQiOiAiMHgwIiwKICAgICJiYXNlRmVlUGVyR2FzIjogIjB4M2I5YWNhMDAiCn0="
+}
