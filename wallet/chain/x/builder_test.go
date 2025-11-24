@@ -36,8 +36,8 @@ var (
 		NetworkID:        constants.UnitTestID,
 		BlockchainID:     xChainID,
 		AVAXAssetID:      avaxAssetID,
-		BaseTxFee:        units.MicroAvax,
-		CreateAssetTxFee: 99 * units.MilliAvax,
+		BaseTxFee:        units.MicroRink,
+		CreateAssetTxFee: 99 * units.MilliRink,
 	}
 )
 
@@ -67,7 +67,7 @@ func TestBaseTx(t *testing.T) {
 		outputsToMove = []*avax.TransferableOutput{{
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 7 * units.Avax,
+				Amt: 7 * units.Rink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Threshold: 1,
 					Addrs:     []ids.ShortID{utxoAddr},
@@ -429,7 +429,7 @@ func TestExportTx(t *testing.T) {
 		exportedOutputs = []*avax.TransferableOutput{{
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 7 * units.Avax,
+				Amt: 7 * units.Rink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Threshold: 1,
 					Addrs:     []ids.ShortID{utxoAddr},
@@ -469,7 +469,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			},
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 2 * units.MilliAvax,
+				Amt: 2 * units.MilliRink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Locktime:  0,
 					Addrs:     []ids.ShortID{utxosKey.PublicKey().Address()},
@@ -539,7 +539,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			},
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 9 * units.Avax,
+				Amt: 9 * units.Rink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Locktime:  0,
 					Addrs:     []ids.ShortID{utxosKey.PublicKey().Address()},

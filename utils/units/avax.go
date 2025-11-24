@@ -5,11 +5,11 @@ package units
 
 // Denominations of value
 const (
-	NanoAvax  uint64 = 1
-	MicroAvax uint64 = 1000 * NanoAvax
-	Schmeckle uint64 = 49*MicroAvax + 463*NanoAvax
-	MilliAvax uint64 = 1000 * MicroAvax
-	Avax      uint64 = 1000 * MilliAvax
-	KiloAvax  uint64 = 1000 * Avax
-	MegaAvax  uint64 = 1000 * KiloAvax
+	NanoRink  uint64 = 1
+	MicroRink uint64 = 1000 * NanoRink
+	Schmeckle uint64 = 49*MicroRink + 463*NanoRink
+	MilliRink uint64 = 1000 * MicroRink
+	Rink      uint64 = 1000 * MilliRink
+	KiloRink  uint64 = 1000 * Rink
+	MegaRink  uint64 = 1000 * KiloRink
 )

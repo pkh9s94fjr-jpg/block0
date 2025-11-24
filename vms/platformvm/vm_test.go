@@ -75,7 +75,7 @@ import (
 )
 
 const (
-	defaultMinDelegatorStake = 1 * units.MilliAvax
+	defaultMinDelegatorStake = 1 * units.MilliRink
 	defaultMinValidatorStake = 5 * defaultMinDelegatorStake
 	defaultMaxValidatorStake = 100 * defaultMinValidatorStake
 
@@ -88,7 +88,7 @@ var (
 		MaxConsumptionRate: .12 * reward.PercentDenominator,
 		MinConsumptionRate: .10 * reward.PercentDenominator,
 		MintingPeriod:      365 * 24 * time.Hour,
-		SupplyCap:          720 * units.MegaAvax,
+		SupplyCap:          720 * units.MegaRink,
 	}
 
 	latestForkTime = genesistest.DefaultValidatorStartTime.Add(time.Second)
@@ -920,7 +920,7 @@ func TestAtomicImport(t *testing.T) {
 		UTXOID: utxoID,
 		Asset:  avax.Asset{ID: vm.ctx.AVAXAssetID},
 		Out: &secp256k1fx.TransferOutput{
-			Amt:          50 * units.MicroAvax,
+			Amt:          50 * units.MicroRink,
 			OutputOwners: *importOwners,
 		},
 	}
@@ -2057,7 +2057,7 @@ func TestBaseTx(t *testing.T) {
 			{
 				Asset: avax.Asset{ID: vm.ctx.AVAXAssetID},
 				Out: &secp256k1fx.TransferOutput{
-					Amt: 100 * units.MicroAvax,
+					Amt: 100 * units.MicroRink,
 					OutputOwners: secp256k1fx.OutputOwners{
 						Threshold: 1,
 						Addrs: []ids.ShortID{
@@ -2094,7 +2094,7 @@ func TestPruneMempool(t *testing.T) {
 			{
 				Asset: avax.Asset{ID: vm.ctx.AVAXAssetID},
 				Out: &secp256k1fx.TransferOutput{
-					Amt: 100 * units.MicroAvax,
+					Amt: 100 * units.MicroRink,
 					OutputOwners: secp256k1fx.OutputOwners{
 						Threshold: 1,
 						Addrs: []ids.ShortID{

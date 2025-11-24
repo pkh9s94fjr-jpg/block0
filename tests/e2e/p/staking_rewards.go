@@ -40,7 +40,7 @@ var _ = ginkgo.Describe("[Staking Rewards]", func() {
 
 			delegationPercent = 0.10 // 10%
 			delegationShare   = reward.PercentDenominator * delegationPercent
-			weight            = 2_000 * units.Avax
+			weight            = 2_000 * units.Rink
 		)
 
 		var (

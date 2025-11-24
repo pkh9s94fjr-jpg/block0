@@ -39,7 +39,7 @@ var _ = e2e.DescribePChain("[Workflow]", func() {
 	ginkgo.It("P-chain main operations", func() {
 		const (
 			// amount to transfer from P to X chain
-			toTransfer                 = 1 * units.Avax
+			toTransfer                 = 1 * units.Rink
 			delegationFeeShares uint32 = 20000 // TODO: retrieve programmatically
 		)
 

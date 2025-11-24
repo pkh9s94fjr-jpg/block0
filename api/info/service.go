@@ -37,31 +37,31 @@ var (
 	errNoChainProvided = errors.New("argument 'chain' not given")
 
 	mainnetGetTxFeeResponse = GetTxFeeResponse{
-		CreateSubnetTxFee:             json.Uint64(1 * units.Avax),
-		TransformSubnetTxFee:          json.Uint64(10 * units.Avax),
-		CreateBlockchainTxFee:         json.Uint64(1 * units.Avax),
+		CreateSubnetTxFee:             json.Uint64(1 * units.Rink),
+		TransformSubnetTxFee:          json.Uint64(10 * units.Rink),
+		CreateBlockchainTxFee:         json.Uint64(1 * units.Rink),
 		AddPrimaryNetworkValidatorFee: json.Uint64(0),
 		AddPrimaryNetworkDelegatorFee: json.Uint64(0),
-		AddSubnetValidatorFee:         json.Uint64(units.MilliAvax),
-		AddSubnetDelegatorFee:         json.Uint64(units.MilliAvax),
+		AddSubnetValidatorFee:         json.Uint64(units.MilliRink),
+		AddSubnetDelegatorFee:         json.Uint64(units.MilliRink),
 	}
 	fujiGetTxFeeResponse = GetTxFeeResponse{
-		CreateSubnetTxFee:             json.Uint64(100 * units.MilliAvax),
-		TransformSubnetTxFee:          json.Uint64(1 * units.Avax),
-		CreateBlockchainTxFee:         json.Uint64(100 * units.MilliAvax),
+		CreateSubnetTxFee:             json.Uint64(100 * units.MilliRink),
+		TransformSubnetTxFee:          json.Uint64(1 * units.Rink),
+		CreateBlockchainTxFee:         json.Uint64(100 * units.MilliRink),
 		AddPrimaryNetworkValidatorFee: json.Uint64(0),
 		AddPrimaryNetworkDelegatorFee: json.Uint64(0),
-		AddSubnetValidatorFee:         json.Uint64(units.MilliAvax),
-		AddSubnetDelegatorFee:         json.Uint64(units.MilliAvax),
+		AddSubnetValidatorFee:         json.Uint64(units.MilliRink),
+		AddSubnetDelegatorFee:         json.Uint64(units.MilliRink),
 	}
 	defaultGetTxFeeResponse = GetTxFeeResponse{
-		CreateSubnetTxFee:             json.Uint64(100 * units.MilliAvax),
-		TransformSubnetTxFee:          json.Uint64(100 * units.MilliAvax),
-		CreateBlockchainTxFee:         json.Uint64(100 * units.MilliAvax),
+		CreateSubnetTxFee:             json.Uint64(100 * units.MilliRink),
+		TransformSubnetTxFee:          json.Uint64(100 * units.MilliRink),
+		CreateBlockchainTxFee:         json.Uint64(100 * units.MilliRink),
 		AddPrimaryNetworkValidatorFee: json.Uint64(0),
 		AddPrimaryNetworkDelegatorFee: json.Uint64(0),
-		AddSubnetValidatorFee:         json.Uint64(units.MilliAvax),
-		AddSubnetDelegatorFee:         json.Uint64(units.MilliAvax),
+		AddSubnetValidatorFee:         json.Uint64(units.MilliRink),
+		AddSubnetDelegatorFee:         json.Uint64(units.MilliRink),
 	}
 )
 

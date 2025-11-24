@@ -111,7 +111,7 @@ func TestIncreaseL1ValidatorBalanceTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: units.Avax,
+							Amt: units.Rink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{2, 5},
 							},

@@ -25,12 +25,12 @@ import (
 
 const (
 	DefaultValidatorDuration = 28 * 24 * time.Hour
-	DefaultValidatorWeight   = 5 * units.MilliAvax
-	DefaultInitialBalance    = 1 * units.Avax
+	DefaultValidatorWeight   = 5 * units.MilliRink
+	DefaultInitialBalance    = 1 * units.Rink
 
 	ValidatorDelegationShares = reward.PercentDenominator
 	XChainName                = "x"
-	InitialSupply             = 360 * units.MegaAvax
+	InitialSupply             = 360 * units.MegaRink
 )
 
 var (

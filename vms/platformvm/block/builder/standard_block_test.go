@@ -45,7 +45,7 @@ func TestAtomicTxImports(t *testing.T) {
 		},
 		Asset: avax.Asset{ID: env.ctx.AVAXAssetID},
 		Out: &secp256k1fx.TransferOutput{
-			Amt:          70 * units.MicroAvax,
+			Amt:          70 * units.MicroRink,
 			OutputOwners: *owner,
 		},
 	}

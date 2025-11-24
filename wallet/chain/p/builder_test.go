@@ -83,7 +83,7 @@ var (
 	avaxOutput = &avax.TransferableOutput{
 		Asset: avax.Asset{ID: avaxAssetID},
 		Out: &secp256k1fx.TransferOutput{
-			Amt:          7 * units.Avax,
+			Amt:          7 * units.Rink,
 			OutputOwners: utxoOwner,
 		},
 	}
@@ -99,7 +99,7 @@ var (
 		Validator: txs.Validator{
 			NodeID: nodeID,
 			End:    uint64(time.Now().Add(time.Hour).Unix()),
-			Wght:   2 * units.Avax,
+			Wght:   2 * units.Rink,
 		},
 		Subnet: constants.PrimaryNetworkID,
 	}
@@ -461,8 +461,8 @@ func TestAddPermissionlessValidatorTx(t *testing.T) {
 
 	var (
 		utxos = []*avax.UTXO{
-			makeUTXO(1 * units.NanoAvax), // small UTXO
-			makeUTXO(9 * units.Avax),     // large UTXO
+			makeUTXO(1 * units.NanoRink), // small UTXO
+			makeUTXO(9 * units.Rink),     // large UTXO
 		}
 
 		validationRewardsOwner        = rewardsOwner
@@ -588,7 +588,7 @@ func TestConvertSubnetToL1Tx(t *testing.T) {
 			{
 				NodeID:  utils.RandomBytes(ids.NodeIDLen),
 				Weight:  rand.Uint64(), //#nosec G404
-				Balance: units.Avax,
+				Balance: units.Rink,
 				Signer:  *pop0,
 				RemainingBalanceOwner: message.PChainOwner{
 					Threshold: 1,
@@ -606,7 +606,7 @@ func TestConvertSubnetToL1Tx(t *testing.T) {
 			{
 				NodeID:                utils.RandomBytes(ids.NodeIDLen),
 				Weight:                rand.Uint64(), //#nosec G404
-				Balance:               2 * units.Avax,
+				Balance:               2 * units.Rink,
 				Signer:                *pop1,
 				RemainingBalanceOwner: message.PChainOwner{},
 				DeactivationOwner:     message.PChainOwner{},
@@ -646,7 +646,7 @@ func TestConvertSubnetToL1Tx(t *testing.T) {
 				nil,
 				nil,
 				map[ids.ID]uint64{
-					e.context.AVAXAssetID: 3 * units.Avax, // Balance of the validators
+					e.context.AVAXAssetID: 3 * units.Rink, // Balance of the validators
 				},
 			)
 		})
@@ -658,7 +658,7 @@ func TestRegisterL1ValidatorTx(t *testing.T) {
 		expiry = 1731005097
 		weight = 7905001371
 
-		balance = units.Avax
+		balance = units.Rink
 	)
 
 	sk, err := localsigner.New()
@@ -836,7 +836,7 @@ func TestSetL1ValidatorWeightTx(t *testing.T) {
 }
 
 func TestIncreaseL1ValidatorBalanceTx(t *testing.T) {
-	const balance = units.Avax
+	const balance = units.Rink
 	validationID := ids.GenerateTestID()
 	for _, e := range testEnvironment {
 		t.Run(e.name, func(t *testing.T) {
@@ -920,7 +920,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			},
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 2 * units.MilliAvax,
+				Amt: 2 * units.MilliRink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Locktime:  0,
 					Addrs:     []ids.ShortID{utxosAddr},
@@ -937,7 +937,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			Out: &stakeable.LockOut{
 				Locktime: uint64(time.Now().Add(time.Hour).Unix()),
 				TransferableOut: &secp256k1fx.TransferOutput{
-					Amt: 3 * units.MilliAvax,
+					Amt: 3 * units.MilliRink,
 					OutputOwners: secp256k1fx.OutputOwners{
 						Threshold: 1,
 						Addrs:     []ids.ShortID{utxosAddr},
@@ -952,7 +952,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			},
 			Asset: avax.Asset{ID: subnetAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 99 * units.MegaAvax,
+				Amt: 99 * units.MegaRink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Locktime:  0,
 					Addrs:     []ids.ShortID{utxosAddr},
@@ -969,7 +969,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			Out: &stakeable.LockOut{
 				Locktime: uint64(time.Now().Add(time.Hour).Unix()),
 				TransferableOut: &secp256k1fx.TransferOutput{
-					Amt: 88 * units.Avax,
+					Amt: 88 * units.Rink,
 					OutputOwners: secp256k1fx.OutputOwners{
 						Threshold: 1,
 						Addrs:     []ids.ShortID{utxosAddr},
@@ -984,7 +984,7 @@ func makeTestUTXOs(utxosKey *secp256k1.PrivateKey) []*avax.UTXO {
 			},
 			Asset: avax.Asset{ID: avaxAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: 9 * units.Avax,
+				Amt: 9 * units.Rink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Locktime:  0,
 					Addrs:     []ids.ShortID{utxosAddr},

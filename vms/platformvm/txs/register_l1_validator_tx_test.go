@@ -30,7 +30,7 @@ var registerL1ValidatorTxJSON []byte
 func TestRegisterL1ValidatorTxSerialization(t *testing.T) {
 	require := require.New(t)
 
-	const balance = units.Avax
+	const balance = units.Rink
 
 	skBytes, err := hex.DecodeString("6668fecd4595b81e4d568398c820bbf3f073cb222902279fa55ebb84764ed2e3")
 	require.NoError(err)
@@ -117,7 +117,7 @@ func TestRegisterL1ValidatorTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: units.Avax,
+							Amt: units.Rink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{2, 5},
 							},

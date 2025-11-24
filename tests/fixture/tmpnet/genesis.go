@@ -27,7 +27,7 @@ const (
 	defaultGasLimit = uint64(100_000_000) // Gas limit is arbitrary
 
 	// Arbitrarily large amount of AVAX to fund keys on the X-Chain for testing
-	defaultFundedKeyXChainAmount = 30 * units.MegaAvax
+	defaultFundedKeyXChainAmount = 30 * units.MegaRink
 )
 
 var (
@@ -78,7 +78,7 @@ func NewTestGenesis(
 	}
 
 	// Ensure the total stake allows a MegaAvax per staker
-	totalStake := uint64(len(initialStakers)) * units.MegaAvax
+	totalStake := uint64(len(initialStakers)) * units.MegaRink
 
 	// The eth address is only needed to link pre-mainnet assets. Until that capability
 	// becomes necessary for testing, use a bogus address.
@@ -135,7 +135,7 @@ func NewTestGenesis(
 				InitialAmount: balance,
 				UnlockSchedule: []genesis.LockedAmount{
 					{
-						Amount: 20 * units.MegaAvax,
+						Amount: 20 * units.MegaRink,
 					},
 					{
 						Amount:   totalStake,

@@ -60,7 +60,7 @@ func main() {
 	exportTx, err := pWallet.IssueExportTx(cChainID, []*avax.TransferableOutput{{
 		Asset: avax.Asset{ID: avaxAssetID},
 		Out: &secp256k1fx.TransferOutput{
-			Amt:          units.Avax,
+			Amt:          units.Rink,
 			OutputOwners: owner,
 		},
 	}})

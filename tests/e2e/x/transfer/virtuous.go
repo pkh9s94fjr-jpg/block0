@@ -41,11 +41,11 @@ var xChainMetricLabels = prometheus.Labels{
 
 // This test requires that the network not have ongoing blocks and
 // cannot reliably be run in parallel.
-var _ = e2e.DescribeXChainSerial("[Virtuous Transfer Tx AVAX]", func() {
+var _ = e2e.DescribeXChainSerial("[Virtuous Transfer Tx RINK]", func() {
 	tc := e2e.NewTestContext()
 	require := require.New(tc)
 
-	ginkgo.It("can issue a virtuous transfer tx for AVAX asset",
+	ginkgo.It("can issue a virtuous transfer tx for RINK asset",
 		func() {
 			var (
 				env     = e2e.GetEnv(tc)
@@ -90,7 +90,7 @@ var _ = e2e.DescribeXChainSerial("[Virtuous Transfer Tx AVAX]", func() {
 			require.NoError(err)
 			testKeys = append(testKeys, newKeys...)
 
-			const transferPerRound = units.MilliAvax
+			const transferPerRound = units.MilliRink
 
 			tc.By("Funding new keys")
 			fundingWallet := e2e.NewWallet(tc, env.NewKeychain(), env.GetRandomNodeURI())

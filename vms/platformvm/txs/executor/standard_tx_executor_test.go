@@ -1295,7 +1295,7 @@ func TestDurangoMemoField(t *testing.T) {
 				var (
 					sourceChain  = env.ctx.XChainID
 					sourceKey    = genesistest.DefaultFundedKeys[1]
-					sourceAmount = 10 * units.Avax
+					sourceAmount = 10 * units.Rink
 				)
 
 				sharedMemory := fundedSharedMemory(
@@ -1337,7 +1337,7 @@ func TestDurangoMemoField(t *testing.T) {
 					[]*avax.TransferableOutput{{
 						Asset: avax.Asset{ID: env.ctx.AVAXAssetID},
 						Out: &secp256k1fx.TransferOutput{
-							Amt:          units.Avax,
+							Amt:          units.Rink,
 							OutputOwners: *owners,
 						},
 					}},
@@ -2746,7 +2746,7 @@ func TestStandardExecutorRegisterL1ValidatorTx(t *testing.T) {
 
 	const (
 		initialWeight  = 1
-		initialBalance = units.Avax
+		initialBalance = units.Rink
 	)
 	var (
 		subnetID      = createSubnetTx.ID()
@@ -3270,7 +3270,7 @@ func TestStandardExecutorSetL1ValidatorWeightTx(t *testing.T) {
 
 	const (
 		initialWeight = 1
-		balance       = units.Avax
+		balance       = units.Rink
 	)
 	var (
 		subnetID  = createSubnetTx.ID()
@@ -3818,7 +3818,7 @@ func TestStandardExecutorIncreaseL1ValidatorBalanceTx(t *testing.T) {
 	initialL1Validator, err := baseState.GetL1Validator(validationID)
 	require.NoError(t, err)
 
-	const balanceIncrease = units.NanoAvax
+	const balanceIncrease = units.NanoRink
 	tests := []struct {
 		name            string
 		validationID    ids.ID
@@ -4059,7 +4059,7 @@ func TestStandardExecutorDisableL1ValidatorTx(t *testing.T) {
 
 	const (
 		weight         = 1
-		initialBalance = units.Avax
+		initialBalance = units.Rink
 	)
 	var (
 		subnetID  = createSubnetTx.ID()

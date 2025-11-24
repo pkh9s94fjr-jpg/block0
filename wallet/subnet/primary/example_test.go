@@ -64,7 +64,7 @@ func ExampleWallet() {
 		map[uint32][]verify.State{
 			0: {
 				&secp256k1fx.TransferOutput{
-					Amt:          100 * units.MegaAvax,
+					Amt:          100 * units.MegaRink,
 					OutputOwners: *owner,
 				},
 			},
@@ -87,7 +87,7 @@ func ExampleWallet() {
 					ID: createAssetTxID,
 				},
 				Out: &secp256k1fx.TransferOutput{
-					Amt:          100 * units.MegaAvax,
+					Amt:          100 * units.MegaRink,
 					OutputOwners: *owner,
 				},
 			},
@@ -123,12 +123,12 @@ func ExampleWallet() {
 	transformSubnetTx, err := pWallet.IssueTransformSubnetTx(
 		createSubnetTxID,
 		createAssetTxID,
-		50*units.MegaAvax,
-		100*units.MegaAvax,
+		50*units.MegaRink,
+		100*units.MegaRink,
 		reward.PercentDenominator,
 		reward.PercentDenominator,
 		1,
-		100*units.MegaAvax,
+		100*units.MegaRink,
 		time.Second,
 		365*24*time.Hour,
 		0,
@@ -151,7 +151,7 @@ func ExampleWallet() {
 				NodeID: genesis.LocalConfig.InitialStakers[0].NodeID,
 				Start:  uint64(startTime.Unix()),
 				End:    uint64(startTime.Add(5 * time.Second).Unix()),
-				Wght:   25 * units.MegaAvax,
+				Wght:   25 * units.MegaRink,
 			},
 			Subnet: createSubnetTxID,
 		},
@@ -175,7 +175,7 @@ func ExampleWallet() {
 				NodeID: genesis.LocalConfig.InitialStakers[0].NodeID,
 				Start:  uint64(startTime.Unix()),
 				End:    uint64(startTime.Add(5 * time.Second).Unix()),
-				Wght:   25 * units.MegaAvax,
+				Wght:   25 * units.MegaRink,
 			},
 			Subnet: createSubnetTxID,
 		},

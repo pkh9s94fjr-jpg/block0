@@ -8,7 +8,7 @@ import (
 	"github.com/ava-labs/avalanchego/vms/components/gas"
 )
 
-const testDynamicPrice = gas.Price(units.NanoAvax)
+const testDynamicPrice = gas.Price(units.NanoRink)
 
 var (
 	testDynamicWeights = gas.Dimensions{
@@ -64,7 +64,7 @@ var (
 				gas.DBWrite:   IntrinsicAddPermissionlessValidatorTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + 2*intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicBLSPoPVerifyCompute + intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 137_191 * units.NanoAvax,
+			expectedDynamicFee: 137_191 * units.NanoRink,
 		},
 		{
 			name: "AddPermissionlessValidatorTx for subnet",
@@ -75,7 +75,7 @@ var (
 				gas.DBWrite:   IntrinsicAddPermissionlessValidatorTxComplexities[gas.DBWrite] + 2*intrinsicInputDBWrite + 3*intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 170_748 * units.NanoAvax,
+			expectedDynamicFee: 170_748 * units.NanoRink,
 		},
 		{
 			name: "AddPermissionlessDelegatorTx for primary network",
@@ -86,7 +86,7 @@ var (
 				gas.DBWrite:   IntrinsicAddPermissionlessDelegatorTxComplexities[gas.DBWrite] + 1*intrinsicInputDBWrite + 2*intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 106_499 * units.NanoAvax,
+			expectedDynamicFee: 106_499 * units.NanoRink,
 		},
 		{
 			name: "AddPermissionlessDelegatorTx for subnet",
@@ -97,7 +97,7 @@ var (
 				gas.DBWrite:   IntrinsicAddPermissionlessDelegatorTxComplexities[gas.DBWrite] + 2*intrinsicInputDBWrite + 3*intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 150_720 * units.NanoAvax,
+			expectedDynamicFee: 150_720 * units.NanoRink,
 		},
 		{
 			name: "AddSubnetValidatorTx",
@@ -108,7 +108,7 @@ var (
 				gas.DBWrite:   IntrinsicAddSubnetValidatorTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 112_460 * units.NanoAvax,
+			expectedDynamicFee: 112_460 * units.NanoRink,
 		},
 		{
 			name: "BaseTx",
@@ -119,7 +119,7 @@ var (
 				gas.DBWrite:   IntrinsicBaseTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + 2*intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 64_399 * units.NanoAvax,
+			expectedDynamicFee: 64_399 * units.NanoRink,
 		},
 		{
 			name: "CreateChainTx",
@@ -130,7 +130,7 @@ var (
 				gas.DBWrite:   IntrinsicCreateChainTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 72_509 * units.NanoAvax,
+			expectedDynamicFee: 72_509 * units.NanoRink,
 		},
 		{
 			name: "CreateSubnetTx",
@@ -141,7 +141,7 @@ var (
 				gas.DBWrite:   IntrinsicCreateSubnetTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 64_339 * units.NanoAvax,
+			expectedDynamicFee: 64_339 * units.NanoRink,
 		},
 		{
 			name: "ExportTx",
@@ -152,7 +152,7 @@ var (
 				gas.DBWrite:   IntrinsicExportTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + 2*intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 64_435 * units.NanoAvax,
+			expectedDynamicFee: 64_435 * units.NanoRink,
 		},
 		{
 			name: "ImportTx",
@@ -163,7 +163,7 @@ var (
 				gas.DBWrite:   IntrinsicImportTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 44_335 * units.NanoAvax,
+			expectedDynamicFee: 44_335 * units.NanoRink,
 		},
 		{
 			name: "RemoveSubnetValidatorTx",
@@ -174,7 +174,7 @@ var (
 				gas.DBWrite:   IntrinsicRemoveSubnetValidatorTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 108_436 * units.NanoAvax,
+			expectedDynamicFee: 108_436 * units.NanoRink,
 		},
 		{
 			name:                  "TransformSubnetTx",
@@ -191,7 +191,7 @@ var (
 				gas.DBWrite:   IntrinsicTransferSubnetOwnershipTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   2 * intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 68_436 * units.NanoAvax,
+			expectedDynamicFee: 68_436 * units.NanoRink,
 		},
 		{
 			name:                 "ConvertSubnetToL1Tx",
@@ -203,7 +203,7 @@ var (
 				gas.DBWrite:   IntrinsicConvertSubnetToL1TxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite + intrinsicConvertSubnetToL1ValidatorDBWrite,
 				gas.Compute:   2*intrinsicSECP256k1FxSignatureCompute + intrinsicBLSPoPVerifyCompute,
 			},
-			expectedDynamicFee: 183_156 * units.NanoAvax,
+			expectedDynamicFee: 183_156 * units.NanoRink,
 		},
 		{
 			name:                 "RegisterL1ValidatorTx",
@@ -215,7 +215,7 @@ var (
 				gas.DBWrite:   IntrinsicRegisterL1ValidatorTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute + intrinsicBLSPoPVerifyCompute + intrinsicBLSAggregateCompute + intrinsicBLSVerifyCompute,
 			},
-			expectedDynamicFee: 241_260 * units.NanoAvax,
+			expectedDynamicFee: 241_260 * units.NanoRink,
 		},
 		{
 			name:                 "SetL1ValidatorWeightTx",
@@ -227,7 +227,7 @@ var (
 				gas.DBWrite:   IntrinsicSetL1ValidatorWeightTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute + intrinsicBLSAggregateCompute + intrinsicBLSVerifyCompute,
 			},
-			expectedDynamicFee: 206_568 * units.NanoAvax,
+			expectedDynamicFee: 206_568 * units.NanoRink,
 		},
 		{
 			name:                 "IncreaseL1ValidatorBalanceTx",
@@ -239,7 +239,7 @@ var (
 				gas.DBWrite:   IntrinsicIncreaseL1ValidatorBalanceTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 146_339 * units.NanoAvax,
+			expectedDynamicFee: 146_339 * units.NanoRink,
 		},
 		{
 			name:                 "DisableL1ValidatorTx",
@@ -251,7 +251,7 @@ var (
 				gas.DBWrite:   IntrinsicDisableL1ValidatorTxComplexities[gas.DBWrite] + intrinsicInputDBWrite + intrinsicOutputDBWrite,
 				gas.Compute:   intrinsicSECP256k1FxSignatureCompute,
 			},
-			expectedDynamicFee: 166_347 * units.NanoAvax,
+			expectedDynamicFee: 166_347 * units.NanoRink,
 		},
 	}
 )

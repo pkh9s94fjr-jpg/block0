@@ -24,7 +24,7 @@ func main() {
 	kc := secp256k1fx.NewKeychain(key)
 	startTime := time.Now().Add(time.Minute)
 	duration := 3 * 7 * 24 * time.Hour // 3 weeks
-	weight := 2_000 * units.Avax
+	weight := 2_000 * units.Rink
 	validatorRewardAddr := key.Address()
 	delegatorRewardAddr := key.Address()
 	delegationFee := uint32(reward.PercentDenominator / 2) // 50%

@@ -71,7 +71,7 @@ func TestTransformSubnetTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: 10 * units.Avax,
+							Amt: 10 * units.Rink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{5},
 							},
@@ -277,7 +277,7 @@ func TestTransformSubnetTxSerialization(t *testing.T) {
 							ID: avaxAssetID,
 						},
 						In: &secp256k1fx.TransferInput{
-							Amt: units.KiloAvax,
+							Amt: units.KiloRink,
 							Input: secp256k1fx.Input{
 								SigIndices: []uint32{2, 5},
 							},

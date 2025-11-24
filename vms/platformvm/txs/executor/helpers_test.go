@@ -43,12 +43,12 @@ import (
 )
 
 const (
-	defaultMinValidatorStake = 5 * units.MilliAvax
+	defaultMinValidatorStake = 5 * units.MilliRink
 
 	defaultMinStakingDuration = 24 * time.Hour
 	defaultMaxStakingDuration = 365 * 24 * time.Hour
 
-	defaultTxFee = 100 * units.NanoAvax
+	defaultTxFee = 100 * units.NanoRink
 )
 
 var (
@@ -244,16 +244,16 @@ func defaultConfig(f upgradetest.Fork) *config.Internal {
 		Chains:                 chains.TestManager,
 		UptimeLockedCalculator: uptime.NewLockedCalculator(),
 		Validators:             validators.NewManager(),
-		MinValidatorStake:      5 * units.MilliAvax,
-		MaxValidatorStake:      500 * units.MilliAvax,
-		MinDelegatorStake:      1 * units.MilliAvax,
+		MinValidatorStake:      5 * units.MilliRink,
+		MaxValidatorStake:      500 * units.MilliRink,
+		MinDelegatorStake:      1 * units.MilliRink,
 		MinStakeDuration:       defaultMinStakingDuration,
 		MaxStakeDuration:       defaultMaxStakingDuration,
 		RewardConfig: reward.Config{
 			MaxConsumptionRate: .12 * reward.PercentDenominator,
 			MinConsumptionRate: .10 * reward.PercentDenominator,
 			MintingPeriod:      365 * 24 * time.Hour,
-			SupplyCap:          720 * units.MegaAvax,
+			SupplyCap:          720 * units.MegaRink,
 		},
 		UpgradeConfig: upgrades,
 	}

@@ -115,7 +115,7 @@ func TestConvertSubnetToL1TxSerialization(t *testing.T) {
 									ID: avaxAssetID,
 								},
 								In: &secp256k1fx.TransferInput{
-									Amt: units.MilliAvax,
+									Amt: units.MilliRink,
 									Input: secp256k1fx.Input{
 										SigIndices: []uint32{5},
 									},
@@ -252,7 +252,7 @@ func TestConvertSubnetToL1TxSerialization(t *testing.T) {
 									ID: avaxAssetID,
 								},
 								In: &secp256k1fx.TransferInput{
-									Amt: units.Avax,
+									Amt: units.Rink,
 									Input: secp256k1fx.Input{
 										SigIndices: []uint32{2, 5},
 									},
@@ -302,7 +302,7 @@ func TestConvertSubnetToL1TxSerialization(t *testing.T) {
 					{
 						NodeID:  nodeID[:],
 						Weight:  0x0102030405060708,
-						Balance: units.Avax,
+						Balance: units.Rink,
 						Signer:  *pop,
 						RemainingBalanceOwner: message.PChainOwner{
 							Threshold: 1,

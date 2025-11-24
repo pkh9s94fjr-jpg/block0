@@ -1838,7 +1838,7 @@ func newAvaxBaseTxWithOutputs(t *testing.T, env *environment) *txs.Tx {
 		[]*avax.TransferableOutput{{
 			Asset: avax.Asset{ID: env.vm.feeAssetID},
 			Out: &secp256k1fx.TransferOutput{
-				Amt: units.MicroAvax,
+				Amt: units.MicroRink,
 				OutputOwners: secp256k1fx.OutputOwners{
 					Threshold: 1,
 					Addrs:     []ids.ShortID{key.PublicKey().Address()},
@@ -1882,7 +1882,7 @@ func buildTestExportTx(t *testing.T, env *environment, chainID ids.ID) *txs.Tx {
 		chainID,
 		to,
 		env.vm.feeAssetID,
-		units.MicroAvax,
+		units.MicroRink,
 		kc,
 		key.Address(),
 	)

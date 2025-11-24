@@ -23,7 +23,7 @@ var _ = e2e.DescribeCChain("[Interchain Workflow]", func() {
 	tc := e2e.NewTestContext()
 	require := require.New(tc)
 
-	const txAmount = 10 * units.Avax // Arbitrary amount to send and transfer
+	const txAmount = 10 * units.Rink // Arbitrary amount to send and transfer
 
 	ginkgo.It("should ensure that funds can be transferred from the C-Chain to the X-Chain and the P-Chain", func() {
 		env := e2e.GetEnv(tc)
